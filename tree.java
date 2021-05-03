@@ -128,7 +128,17 @@ class BT{
 
 		}
     
-	}
+}
+	
+ public static int countLeaf(Node n){
+	 	
+	 int count = 0;
+	 if(n.getLeft()==null && n.getRight()==null){
+		 count++;
+	 } else {
+		 count += countLeaf(n.getLeft()) + countLeaf(n.getRight());
+	 }
+ }
   
 }
 
@@ -227,6 +237,8 @@ class BinaryTree{
     }
     
   }
+	
+
   
   //closing the class
 }
